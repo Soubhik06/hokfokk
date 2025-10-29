@@ -19,7 +19,7 @@ const About = () => {
       icon: TrendingUp,
       title: "Industry Partnerships",
       description:
-        "Strong collaborations with leading chemical companies and research institutes, enabling internships, joint projects, and technology transfer.",
+        "The Department of Chemical Engineering at Jadavpur University has built a strong legacy of collaboration with some of the most renowned industrial giants in India. Over the years, several reputed companies such as Reliance Industries Limited, Aditya Birla Chemicals, ONGC, Vedanta, Balmer Lawrie & Co. Ltd., Indian Oil Corporation Limited (IOCL), Haldia Petrochemicals Ltd., MCPI Pvt. Ltd., and Indorama Ventures have partnered with the department through sponsorships, research collaborations, and student engagement initiatives. These industrial associations have not only supported departmental events and technical fests under the IIChE Jadavpur University Student Chapter, but have also provided valuable platforms for students to bridge theoretical knowledge with real-world applications. Such partnerships play a vital role in fostering innovation, promoting industrial exposure, and strengthening the academic–industry linkage that continues to define the excellence and practical orientation of Jadavpur University’s Chemical Engineering education.",
     },
     {
       icon: Target,
