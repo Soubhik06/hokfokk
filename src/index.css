@@ -36,6 +36,9 @@ All colors MUST be HSL.
     --input: 214 32% 91%;
     --ring: 187 100% 42%;
 
+    /* Brand color for logo accents (deep maroon) */
+    --brand: 352 78% 27%;
+
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
@@ -76,6 +79,9 @@ All colors MUST be HSL.
     --border: 217 33% 17%;
     --input: 217 33% 17%;
     --ring: 187 100% 42%;
+
+    /* Brand color stays consistent in dark mode */
+    --brand: 352 78% 27%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -95,5 +101,46 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes sparkle-pop {
+    0% { transform: translate(var(--sx,0), var(--sy,0)) scale(0); opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translate(calc(var(--sx,0) * 1.8), calc(var(--sy,0) * 1.8)) scale(1); opacity: 0; }
+  }
+
+  .sparkle {
+    pointer-events: none;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: hsl(var(--accent));
+    animation: sparkle-pop 600ms ease-out forwards;
+    box-shadow: 0 0 8px hsla(var(--accent),0.6);
+  }
+
+  /* Subtle grid overlay utility */
+  .bg-grid {
+    background-image: linear-gradient(hsla(0,0%,100%,0.04) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Fancy gradient text utility */
+  .text-gradient-brand {
+    background-image: linear-gradient(90deg, hsl(var(--brand)), hsl(var(--primary)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Line clamp utility without plugin */
+  .line-clamp-6 {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }

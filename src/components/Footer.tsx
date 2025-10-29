@@ -85,14 +85,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/20 pt-8 text-center text-sm text-background/80">
+        <div className="border-top border-background/20 pt-8 text-center text-sm text-background/80">
           <p>© 2025 Department of Chemical Engineering. All rights reserved.</p>
-          <p className="mt-2">
-            Designed with ❤️ by{" "}
-            <a href="#" className="text-primary hover:underline">
-              This Team
-            </a>
-          </p>
         </div>
       </div>
     </footer>
